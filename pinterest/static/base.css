@@ -1,0 +1,31 @@
+.Pinterest_footer_logo {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.Pinterest_footer_button {
+    text-align: center;
+    font-size: .6rem;
+}
+
+.Pinterest_footer {
+    text-align: center;
+    margin-top: 100rem;
+}
+
+.Pinterest_header {
+    text-align: center;
+    margin: 2rem 0;
+
+}
+
+.Pinterest_logo {
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+}
+
+#header_list {
+    text-align: center;
+}
