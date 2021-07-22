@@ -10,17 +10,19 @@
          <form action="{% url 'hello_world' %}" method="POST"> 
             <!-- action에는 적용시킬 url을 작성 -->
             {% csrf_token %}
-        
-                <input type="text" name="hello_world_input" id="">
-            
-        
-            <input type="submit" class="btn btn-primary " value="POST">
-            
+            <div>
+                <input type="text" name="hello_world_input" >
+            </div>
+            <div>
+                <input type="submit" class="btn btn-primary " value="POST">
+            </div>
         </form>
         
+        {% if hello_world_output %}
         <h1>
-            {{text}}
+            {{ hello_world_output.text }}
         </h1>
+        {% endif %}
         
     </div>
 {% endblock %}
