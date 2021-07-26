@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.urls import reverse
 from .models import *
 from django.http import HttpResponse, HttpResponseRedirect
-
+from django.views.generic import CreateView
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -23,3 +24,6 @@ def hello_world(request):
         hello_world_list = HelloWorld.objects.all()
         return render(request, 'accountapp/hello_world.html', context={'hello_world_list': hello_world_list})
     
+
+class AccountCreateView(Createview):
+    model = User
