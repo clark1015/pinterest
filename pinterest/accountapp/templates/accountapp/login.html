@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 
 {% block content %}
 
-<div style="text-align: center;">
+<div style="text-align: center; max-width: 500px; margin: 4rem auto;">
     <div>
         <h4>Login</h4>
     </div>
     <div>
         <form action=""method="POST">
             {% csrf_token %}
-            {{form}}
-            <input type="submit" class="btn btn-primary">
+            {% bootstrap_form form %}
+            <input type="submit" class="btn btn-dark rounded-pill col-6 mt-3">
+            <!--mt-3: margin-top 3배   col-6: 12가 100% 6이 50% 부모 크기의 절반으로 설정한 것! -->
+
         </form>
     </div>
+
 </div>
 
 {% endblock %}
